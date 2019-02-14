@@ -1,0 +1,6 @@
+C:\Users\Section1\Desktop\Araba Kiralama Projesi\Entity\bin\Debug\Entity.dll
+C:\Users\Section1\Desktop\Araba Kiralama Projesi\Entity\bin\Debug\Entity.pdb
+C:\Users\Section1\Desktop\Araba Kiralama Projesi\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+C:\Users\Section1\Desktop\Araba Kiralama Projesi\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\Section1\Desktop\Araba Kiralama Projesi\Entity\obj\Debug\Entity.dll
+C:\Users\Section1\Desktop\Araba Kiralama Projesi\Entity\obj\Debug\Entity.pdb
