@@ -19,7 +19,7 @@ namespace RentCars.Controllers
             return View(_vw);
         }
         [HttpPost]
-        public ActionResult Index(int brandId, int VendorId,decimal MaxPrice)
+        public ActionResult Index(string Username,string Password)
         {
             FilterViewModel _vw = new FilterViewModel();
             _vw.Vendors = db.Vendor.ToList();
@@ -27,10 +27,7 @@ namespace RentCars.Controllers
           var price= Convert.ToDecimal(Request.Form["MaxPrice"]);
             var brand = Convert.ToInt32(Request.Form["brandID"]);
             var vendor = Convert.ToInt32(Request.Form["VendorId"]);
-           
-
-            //var a = from c in db.Car
-            //        where c.VendorId == VendorId && c.BrandId == brandId && c.Price<=MaxPrice
+          
           
             var FilterElemans = db.Car.Where(x => x.VendorId == vendor && x.BrandId == brand && x.Price <= price).ToList();
          
@@ -40,20 +37,17 @@ namespace RentCars.Controllers
                 return RedirectToAction("Cars","Cars");
 
             }
-         
-
-
-            TempData["Error"] = "Kriterlerinize uygun arabamız bulunamadı ... Tedarik için";
        
-
-
+          
+       
 
 
             return View(_vw);
         }
-      
        
-       
+
+
+
         public ActionResult _Funfact()
         {
             return View();
