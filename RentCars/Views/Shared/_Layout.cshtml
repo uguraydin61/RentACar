@@ -51,48 +51,8 @@
             </div>
         </div>
     </div>
-    <header id="header-area" class="fixed-top">
-        <!--== Header Top Start ==-->
-        <div id="header-top" class="d-none d-xl-block">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 text-left">
-                        @if (ViewBag.Customer == null)
-                        {
-                        <form method="post">
-                            <input type="text" name="UserName" class="form-control" />
-                            <input type="text" name="Password" class="form-control" />
-                            <button>Giriş yap</button>
-                        </form>
-                             
-
-
-
-                            }
-                        }
-                        else
-                        {
-                            @ViewBag.Customer.UserName <p>Hoş Geldiniz</p>
-                        }
-
-                    </div>
-                    <div class="col-lg-3 text-center">
-                        <i class="fa fa-clock-o"></i> Mon-Fri 09.00 - 17.00
-                    </div>
-                    <!--== Single HeaderTop End ==-->
-                    <!--== Social Icons Start ==-->
-                    <div class="col-lg-3 text-right">
-                        <div class="header-social-icons">
-                            <a href="#"><i class="fa fa-behance"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <!--== Social Icons End ==-->
-                </div>
-            </div>
-        </div>
+ 
+    @Html.Action("LoginPage","Home");
         <!--== Header Top End ==-->
         <!--== Header Bottom Start ==-->
         <div id="header-bottom">
