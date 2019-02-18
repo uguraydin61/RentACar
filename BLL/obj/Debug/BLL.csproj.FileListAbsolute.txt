@@ -49,3 +49,20 @@ C:\Users\MSI\Desktop\New folder\RentACar\BLL\obj\Debug\BLL.csproj.CoreCompileInp
 C:\Users\MSI\Desktop\New folder\RentACar\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\MSI\Desktop\New folder\RentACar\BLL\obj\Debug\BLL.dll
 C:\Users\MSI\Desktop\New folder\RentACar\BLL\obj\Debug\BLL.pdb
+C:\Users\Can\source\repos\RentACar\BLL\bin\Debug\BLL.dll.config
+C:\Users\Can\source\repos\RentACar\BLL\bin\Debug\BLL.dll
+C:\Users\Can\source\repos\RentACar\BLL\bin\Debug\BLL.pdb
+C:\Users\Can\source\repos\RentACar\BLL\bin\Debug\DAL.dll
+C:\Users\Can\source\repos\RentACar\BLL\bin\Debug\Entity.dll
+C:\Users\Can\source\repos\RentACar\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Can\source\repos\RentACar\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Can\source\repos\RentACar\BLL\bin\Debug\DAL.pdb
+C:\Users\Can\source\repos\RentACar\BLL\bin\Debug\DAL.dll.config
+C:\Users\Can\source\repos\RentACar\BLL\bin\Debug\Entity.pdb
+C:\Users\Can\source\repos\RentACar\BLL\bin\Debug\EntityFramework.xml
+C:\Users\Can\source\repos\RentACar\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Can\source\repos\RentACar\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Can\source\repos\RentACar\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Can\source\repos\RentACar\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Can\source\repos\RentACar\BLL\obj\Debug\BLL.dll
+C:\Users\Can\source\repos\RentACar\BLL\obj\Debug\BLL.pdb

@@ -1,0 +1,31 @@
+﻿@using Entity
+@model List<Vendor>
+
+
+<h2>Bayiler</h2>
+<a href="/Panel/Vendor/Yeni">Yeni Bayi Ekle</a>
+
+<style>
+    th, td {
+        padding: 20px;
+        border: 1px solid black;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>Bayi Adı</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>
+                <a href="?sil=@item.Id">Sil</a>
+                <a href="/Panel/Vendor/Duzenle/@item.Id">Düzenle</a>
+            </td>
+        </tr>
+    }
+</table>
+

@@ -37,7 +37,7 @@ namespace BLL
             db.Set<T>().Remove(silinecek);
             db.SaveChanges();
         }
-        public void Güncelle(IEntity yeni)
+        public void Guncelle(IEntity yeni)
         {
             var eski = BirTaneGetir(yeni.Id);
             db.Entry(eski).CurrentValues.SetValues(yeni);

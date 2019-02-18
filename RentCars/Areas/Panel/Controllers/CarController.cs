@@ -53,7 +53,7 @@ namespace RentCars.Areas.Panel.Controllers
         {
             if (ModelState.IsValid)
             {
-                _uw.CarRep.Güncelle(yeni);
+                _uw.CarRep.Guncelle(yeni);
                 return RedirectToAction("Index");
 
             }
