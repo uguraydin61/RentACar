@@ -51,33 +51,25 @@
             </div>
         </div>
     </div>
+
     <header id="header-area" class="fixed-top">
         <!--== Header Top Start ==-->
         <div id="header-top" class="d-none d-xl-block">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 text-left">
-                        @if (ViewBag.Customer == null)
-                        {
-                        <form method="post">
-                            <input type="text" name="UserName" class="form-control" />
-                            <input type="text" name="Password" class="form-control" />
-                            <button>Giriş yap</button>
-                        </form>
-                             
-
-
-
-                            }
-                        }
-                        else
-                        {
-                            @ViewBag.Customer.UserName <p>Hoş Geldiniz</p>
-                        }
-
+                    <!--== Single HeaderTop Start ==-->
+                    <div class="col-lg-3 text-left">
+                        <i class="fa fa-map-marker"></i> 802/2, Mirpur, Dhaka
                     </div>
+                    <!--== Single HeaderTop End ==-->
+                    <!--== Single HeaderTop Start ==-->
                     <div class="col-lg-3 text-center">
-                        <i class="fa fa-clock-o"></i> Mon-Fri 09.00 - 17.00
+                        <i class="fa fa-mobile"></i> +1 800 345 678
+                    </div>
+                    <!--== Single HeaderTop End ==-->
+                    <!--== Single HeaderTop Start ==-->
+                    <div class="col-lg-3 text-center">
+                       <a href="/Login/Index/" class="btn btn-secondary btn-sm">Giriş Yap</a>
                     </div>
                     <!--== Single HeaderTop End ==-->
                     <!--== Social Icons Start ==-->
@@ -109,14 +101,14 @@
                     <div class="col-lg-8 d-none d-xl-block">
                         <nav class="mainmenu alignright">
                             <ul>
-                                <li >
+                                <li>
                                     <a href="/Home/Index">Home</a>
                                 </li>
-                                <li ><a href="/About/About"">About</a></li>
-                                <li><a href="/Service/Service"">services</a></li>
+                                <li><a href="/About/About" ">About</a></li>
+                                <li><a href="/Service/Service" ">services</a></li>
                                 <li>
                                     <a href="/Cars/Cars">Cars</a>
-                                    
+
                                 </li>
                                 <li>
                                     <a href="#">Pages</a>
@@ -126,11 +118,11 @@
                                         <li><a href="/Pages/FAQ">FAQ</a></li>
                                         <li><a href="/Pages/Gallery">Gallery</a></li>
                                         <li><a href="/Pages/HelpDesk">Help Desk</a></li>
-                                       
+
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="/Blog/Blog">Blog</a>                                  
+                                    <a href="/Blog/Blog">Blog</a>
                                 </li>
                                 <li><a href="/Contact/Contact">Contact</a></li>
                             </ul>
