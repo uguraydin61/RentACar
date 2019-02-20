@@ -18,28 +18,29 @@ namespace BLL
             db = gelendb;
         }
 
-        public List<T> HepsiniGetir()
+        public virtual List<T> HepsiniGetir()
         {
             return db.Set<T>().ToList();
         }
-        public T BirTaneGetir(int id)
+        public virtual T BirTaneGetir(int id)
         {
             return db.Set<T>().Find(id);
         }
-        public void Ekle(T yeni)
+        public virtual void Ekle(T yeni)
         {
             db.Set<T>().Add(yeni);
             db.SaveChanges();
         }
-        public void Sil(int id)
+        public virtual void Sil(int id)
         {
             var silinecek = BirTaneGetir(id);
             db.Set<T>().Remove(silinecek);
             db.SaveChanges();
         }
-        public void Guncelle(IEntity yeni)
+        public virtual void Guncelle(IEntity yeni)
         {
             var eski = BirTaneGetir(yeni.Id);
+                  
             db.Entry(eski).CurrentValues.SetValues(yeni);
             db.Entry(eski).State = EntityState.Modified;
             db.SaveChanges();

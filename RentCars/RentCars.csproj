@@ -258,6 +258,11 @@
     <Content Include="Areas\Panel\Views\Vendor\Yeni.cshtml" />
     <Content Include="Areas\Panel\Views\Vendor\Index.cshtml" />
     <Content Include="Areas\Panel\Views\Vendor\Duzenle.cshtml" />
+    <Content Include="Areas\Panel\Views\Car\Yeni.cshtml" />
+    <Content Include="Areas\Panel\Views\Car\Duzenle.cshtml" />
+    <Content Include="Areas\Panel\Views\CarBrand\Yeni.cshtml" />
+    <Content Include="Areas\Panel\Views\CarBrand\Index.cshtml" />
+    <Content Include="Areas\Panel\Views\CarBrand\Duzenle.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -301,7 +306,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Panel\Models\" />
     <Folder Include="Areas\Panel\Views\Blog\" />
-    <Folder Include="Areas\Panel\Views\CarBrand\" />
     <Folder Include="Areas\Panel\Views\CarDetail\" />
     <Folder Include="Areas\Panel\Views\Comment\" />
     <Folder Include="Areas\Panel\Views\Customer\" />
