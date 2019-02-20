@@ -16,6 +16,8 @@ namespace DAL.Migrations
 
         protected override void Seed(DAL.RentContext context)
         {
+
+
         
 
             
