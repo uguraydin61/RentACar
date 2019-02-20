@@ -2,6 +2,7 @@
 @{
     Layout = null;
 }
+@using Entity
 
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
@@ -68,9 +69,24 @@
                     </div>
                     <!--== Single HeaderTop End ==-->
                     <!--== Single HeaderTop Start ==-->
-                    <div class="col-lg-3 text-center">
-                       <a href="/Login/Index/" class="btn btn-secondary btn-sm">Giriş Yap</a>
-                    </div>
+                    @{
+
+                        if (Session["Kullanici"]!=null)
+                        {
+                            <p>@Session["Kullanici"]</p>
+                        }
+                        else
+                        {
+                            <div class="col-lg-3 text-center">
+                                <a href="/Login/Index/" class="btn btn-secondary btn-sm">Giriş Yap</a>
+                            </div>
+
+                        }
+
+
+
+                    }
+
                     <!--== Single HeaderTop End ==-->
                     <!--== Social Icons Start ==-->
                     <div class="col-lg-3 text-right">

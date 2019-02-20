@@ -16,11 +16,18 @@ namespace RentCars.Controllers
             FilterViewModel _vw = new FilterViewModel();
             _vw.Vendors = db.Vendor.ToList();
             _vw.CarBrands = db.CarBrand.ToList();
+     
+          
+
             return View(_vw);
+         
+
         }
         [HttpPost]
         public ActionResult Index(string Username,string Password)
         {
+
+          
             FilterViewModel _vw = new FilterViewModel();
             _vw.Vendors = db.Vendor.ToList();
             _vw.CarBrands = db.CarBrand.ToList();
@@ -37,9 +44,9 @@ namespace RentCars.Controllers
                 return RedirectToAction("Cars","Cars");
 
             }
-       
           
-       
+
+
 
 
             return View(_vw);
