@@ -1,8 +1,39 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@using Entity
+@model List<Car>
 
-<h2>Index</h2>
+
+<h2>Arabalar</h2>
+<a href="/Panel/Car/Yeni">Yeni Araba Ekle</a>
+
+<style>
+    th, td {
+        padding: 20px;
+        border: 1px solid black;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>Araba Modeli</th>
+        <th>Araba Markası</th>
+        <th>Bayi Adı</th>
+        <th>Fiyat</th>
+        <th>Sayısı</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@item.CarModel</td>
+        <td>@item.CarBrand.BrandName</td>
+        <td>@item.Vendor.Name</td>
+        <td>@item.Price</td>
+        <td>@item.numbersCar</td>
+        <td>
+            <a href="?sil=@item.Id">Sil</a>
+            <a href="/Panel/Car/Duzenle/@item.Id">Düzenle</a>
+        </td>
+    </tr>
+    }
+</table>
 

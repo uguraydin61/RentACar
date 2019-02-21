@@ -1,0 +1,18 @@
+﻿@using Entity
+@model CarBrand
+
+
+
+<h2>Marka Düzenle</h2>
+
+<form method="post">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+
+    <input name="BrandName" class="form-control" value="@Model.BrandName" />
+
+    <button>Kaydet</button>
+
+</form>
+

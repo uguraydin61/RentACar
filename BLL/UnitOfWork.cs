@@ -12,7 +12,7 @@ namespace BLL
         public RentContext db = new RentContext();
 
         public BaseRepository<Blog> BlogRep;
-        public BaseRepository<Car> CarRep;
+        public CarRepository CarRep;
         public BaseRepository<CarBrand> CarBrandRep;
         public BaseRepository<CarDetail> CarDetailRep;
         public BaseRepository<Comment> CommentRep;
@@ -25,7 +25,7 @@ namespace BLL
         public UnitOfWork()
         {
             BlogRep = new BaseRepository<Blog>(db);
-            CarRep = new BaseRepository<Car>(db);
+            CarRep = new CarRepository(db);
             CarBrandRep = new BaseRepository<CarBrand>(db);
             CarDetailRep = new BaseRepository<CarDetail>(db);
             CommentRep = new BaseRepository<Comment>(db);

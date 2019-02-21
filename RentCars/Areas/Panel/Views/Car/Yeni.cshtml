@@ -1,0 +1,37 @@
+﻿@using Entity
+@model List<Car>
+
+<h2>Araba Ekle</h2>
+
+<form method="post">
+
+    <div class="form-group">
+        <label>Araba Markası</label>
+        <select name="MarkaId" required>
+            <option value="">Seçiniz</option>
+            @foreach (CarBrand item in ViewBag.Markalar)
+            {
+                <option value="@item.Id">@item.BrandName</option>
+            }
+
+        </select>
+
+    </div>
+    <div class="form-group">
+        <label>Bayiler</label>
+        <select name="VendorId" required>
+            <option value="">Seçiniz</option>
+            @foreach (Vendor item in ViewBag.Vendors)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+
+        </select>
+
+    </div>
+    <input name="CarModel" class="form-control" placeholder="Araba Modeli" />
+    <input name="Price" class="form-control" type="number" placeholder="Fiyat" />
+    <input name="numbersCar" class="form-control" type="number"  placeholder="Araba Sayısı" />
+    <button>Kaydet</button>
+</form>
+
