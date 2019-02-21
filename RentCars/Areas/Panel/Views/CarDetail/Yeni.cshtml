@@ -1,13 +1,15 @@
-﻿<h2>Araba Detayı Ekle</h2>
+﻿@using Entity
+@model Car
 
+<h2>Araba Detayı Ekle</h2>
 <form method="post">
-
-    <input name="CarClass" class="form-control" placeholder="Araba Klasmanı Ekle" />
-    <input name="CarFuel" class="form-control" placeholder="Araba Yakıt Tipi Ekle" />
-    <input name="Doors" class="form-control" type="number" placeholder="Araba Kapı Sayısı" />
-    <input name="Seats" class="form-control" type="number" placeholder="Araba Koltuk Sayısı" />
-    <input name="Properties" class="form-control" placeholder="Araba Özellikleri" />
-    <input name="CarDate" class="form-control" type="datetime" placeholder="Araba Model Yılı" />
-    <input name="CarAbout" class="form-control" type="text" placeholder="Araba Hakkında" />
+    <input type="hidden" value="@Model.Id" name="id" />
+    <input name="CarClass" class="form-control" placeholder="Araba Klasmanı Ekle" /><br />
+    <input name="CarFuel" class="form-control" placeholder="Araba Yakıt Tipi Ekle" /><br />
+    <input name="Doors" class="form-control" type="number" placeholder="Araba Kapı Sayısı" /><br />
+    <input name="Seats" class="form-control" type="number" placeholder="Araba Koltuk Sayısı" /><br />
+    <input name="Properties" class="form-control" placeholder="Araba Özellikleri" /><br />
+    <input name="CarDate" class="form-control" type="datetime" placeholder="Araba Model Yılı" /><br />
+    <input name="CarAbout" class="form-control" type="text" placeholder="Araba Hakkında" /><br />
     <button>Kaydet</button>
 </form>

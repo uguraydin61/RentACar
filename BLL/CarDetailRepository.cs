@@ -14,29 +14,16 @@ namespace BLL
         RentContext _db;
         public CarDetailRepository(RentContext db) : base(db)
         {
-            _db = db;  //db: Unity of Works den geliyor
+            _db = db;  
         }
 
 
 
         public virtual void ArabaylaEkle(CarDetail yenidetay,int id)
-        //doğrusu
-        //db den markayı seçtiğimiz için,mevcut bir kayıt olduğunu biliyor
+       
         {
             yenidetay.Id = id;
-
-            // yanlış
-            /*
-             * urun.Marka=new Marka() {Id=MarkaId,MarkAdi="adi"};
-             * Aynı biligiler olsa bile yeni marka
-             * 
-             
-    */
-
-
-
-
-            _db.CarDetail.Add(yenidetay);
+                 _db.CarDetail.Add(yenidetay);
             _db.SaveChanges();
 
 

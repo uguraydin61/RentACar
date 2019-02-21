@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL;
 using Entity;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace RentCars.Areas.Panel.Controllers
         UnitOfWork _uw = new UnitOfWork();
 
 
+        RentContext db = new RentContext();
 
         // GET: Marka
         public ActionResult Index(int? sil)
@@ -29,9 +31,12 @@ namespace RentCars.Areas.Panel.Controllers
         [HttpGet]
         public ActionResult Yeni()
         {
-            ViewBag.Gruplar = _uw.CarDetailRep.HepsiniGetir();
+         var a=   db.Car.OrderByDescending(x => x.Id).First();
+
+            
+            ViewBag.Detaylar = _uw.CarDetailRep.HepsiniGetir();
             ViewBag.Arabalar = _uw.CarRep.HepsiniGetir();
-            return View();
+            return View(a);
         }
 
         [HttpPost]
@@ -39,7 +44,7 @@ namespace RentCars.Areas.Panel.Controllers
         { 
             if (ModelState.IsValid)
             {
-                _uw.CarDetailRep.ArabaylaEkle(yenidetay,id);
+                _uw.CarDetailRep.ArabaylaEkle(yenidetay,id.Value);
                 return RedirectToAction("Index");
             }
             ViewBag.Arabalar = _uw.CarRep.HepsiniGetir();
@@ -51,7 +56,7 @@ namespace RentCars.Areas.Panel.Controllers
         [HttpGet]
         public ActionResult Duzenle(int id)
         {
-            ViewBag.Gruplar = _uw.CarDetailRep.HepsiniGetir();
+            ViewBag.Detaylar = _uw.CarDetailRep.HepsiniGetir();
             return View(_uw.CarDetailRep.BirTaneGetir(id));
         }
 

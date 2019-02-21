@@ -22,3 +22,9 @@ C:\Users\Can\Source\Repos\RentACar\Entity\obj\Debug\Entity.csprojAssemblyReferen
 C:\Users\Can\Source\Repos\RentACar\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
 C:\Users\Can\Source\Repos\RentACar\Entity\obj\Debug\Entity.dll
 C:\Users\Can\Source\Repos\RentACar\Entity\obj\Debug\Entity.pdb
+C:\Users\MSI\Desktop\RentCaar\RentACar\Entity\bin\Debug\Entity.dll
+C:\Users\MSI\Desktop\RentCaar\RentACar\Entity\bin\Debug\Entity.pdb
+C:\Users\MSI\Desktop\RentCaar\RentACar\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+C:\Users\MSI\Desktop\RentCaar\RentACar\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\MSI\Desktop\RentCaar\RentACar\Entity\obj\Debug\Entity.dll
+C:\Users\MSI\Desktop\RentCaar\RentACar\Entity\obj\Debug\Entity.pdb

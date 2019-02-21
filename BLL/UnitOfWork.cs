@@ -14,7 +14,7 @@ namespace BLL
         public BaseRepository<Blog> BlogRep;
         public CarRepository CarRep;
         public BaseRepository<CarBrand> CarBrandRep;
-        public BaseRepository<CarDetail> CarDetailRep;
+        public CarDetailRepository CarDetailRep;
         public BaseRepository<Comment> CommentRep;
         public BaseRepository<Customer> CustomerRep;
         public BaseRepository<Package> PackageRep;
@@ -27,7 +27,7 @@ namespace BLL
             BlogRep = new BaseRepository<Blog>(db);
             CarRep = new CarRepository(db);
             CarBrandRep = new BaseRepository<CarBrand>(db);
-            CarDetailRep = new BaseRepository<CarDetail>(db);
+            CarDetailRep = new CarDetailRepository(db);
             CommentRep = new BaseRepository<Comment>(db);
             CustomerRep = new BaseRepository<Customer>(db);
             PackageRep = new BaseRepository<Package>(db);
