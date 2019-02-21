@@ -35,12 +35,15 @@ namespace RentCars.Areas.Panel.Controllers
         }
         //model binding: uygun parametreler gelirse modele çevirme
         [HttpPost]
-        public ActionResult Yeni(Car yeniurun, int MarkaId,int VendorId)
+        public ActionResult Yeni(Car yeniurun, int MarkaId,int VendorId, HttpPostedFileBase CarImage)
         {
             if (ModelState.IsValid)
             {
+                _uw.CarRep.MarkaylaEkle(yeniurun, MarkaId, VendorId);
+                var path = Server.MapPath("/Uploads/");
+                CarImage.SaveAs(path + yeniurun.Id + ".jpg");
 
-                _uw.CarRep.MarkaylaEkle(yeniurun, MarkaId,VendorId);
+               
                 return RedirectToAction("Index", "Car");
                 //Action: Controller
             }
@@ -64,11 +67,18 @@ namespace RentCars.Areas.Panel.Controllers
         }
 
         [HttpPost]
-        public ActionResult Duzenle(Car cars, int Id)
+        
+        public ActionResult Duzenle(Car cars,HttpPostedFileBase CarImage)
         {
             if (ModelState.IsValid)
             {
-                             
+              
+                if (CarImage != null)
+                {
+                   
+                    var path = Server.MapPath("/Uploads/");
+                    CarImage.SaveAs(path + cars.Id + ".jpg");
+                }
                 _uw.CarRep.Guncelle(cars);
                 return RedirectToAction("Index");
             }

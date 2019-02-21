@@ -10,6 +10,11 @@
         padding: 20px;
         border: 1px solid black;
     }
+     .a{
+         width:200px;
+         height:200px;
+     }
+
 </style>
 
 <table>
@@ -19,7 +24,9 @@
         <th>Bayi Adı</th>
         <th>Fiyat</th>
         <th>Sayısı</th>
+        <th>Resim</th>
         <th>İşlemler</th>
+       
     </tr>
     @foreach (var item in Model)
     {
@@ -29,6 +36,7 @@
         <td>@item.Vendor.Name</td>
         <td>@item.Price</td>
         <td>@item.numbersCar</td>
+        <td><img src="/Uploads/@Html.Raw(item.Id+".jpg") " class="img-responsive a" /></td>
         <td>
             <a href="?sil=@item.Id">Sil</a>
             <a href="/Panel/Car/Duzenle/@item.Id">Düzenle</a>

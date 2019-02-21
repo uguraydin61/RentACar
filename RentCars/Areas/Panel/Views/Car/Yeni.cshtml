@@ -3,7 +3,7 @@
 
 <h2>Araba Ekle</h2>
 
-<form method="post">
+<form method="post" enctype="multipart/form-data">
 
     <div class="form-group">
         <label>Araba Markası</label>
@@ -31,7 +31,12 @@
     </div>
     <input name="CarModel" class="form-control" placeholder="Araba Modeli" />
     <input name="Price" class="form-control" type="number" placeholder="Fiyat" />
-    <input name="numbersCar" class="form-control" type="number"  placeholder="Araba Sayısı" />
+    <input name="numbersCar" class="form-control" type="number" placeholder="Araba Sayısı" />
+    <div class="form-group">
+      
+        <input name="CarImage" type="file" placeholder="Car Image" />
+    </div>
     <button>Kaydet</button>
 </form>
+
 

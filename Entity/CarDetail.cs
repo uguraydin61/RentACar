@@ -17,7 +17,7 @@ namespace Entity
         public int Doors { get; set; }
         public int Seats { get; set; }
         public string Properties { get; set; }
-        public DateTime CarDate { get; set; }
+        public DateTime? CarDate { get; set; }
         public string CarAbout { get; set; }
 
 

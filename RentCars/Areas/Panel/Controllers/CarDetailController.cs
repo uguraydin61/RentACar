@@ -30,18 +30,20 @@ namespace RentCars.Areas.Panel.Controllers
         public ActionResult Yeni()
         {
             ViewBag.Gruplar = _uw.CarDetailRep.HepsiniGetir();
+            ViewBag.Arabalar = _uw.CarRep.HepsiniGetir();
             return View();
         }
 
         [HttpPost]
-        public ActionResult Yeni(CarDetail gelen)
-        {
+        public ActionResult Yeni(CarDetail yenidetay,int? id)
+        { 
             if (ModelState.IsValid)
             {
-                _uw.CarDetailRep.Ekle(gelen);
+                _uw.CarDetailRep.ArabaylaEkle(yenidetay,id);
                 return RedirectToAction("Index");
             }
-            return View(gelen);
+            ViewBag.Arabalar = _uw.CarRep.HepsiniGetir();
+            return View(yenidetay);
         }
         //Marka/Duzenle/5
         //{controller}/{action}/{id}
@@ -65,5 +67,4 @@ namespace RentCars.Areas.Panel.Controllers
             return View(yeni);
         }
     }
-}
 }
