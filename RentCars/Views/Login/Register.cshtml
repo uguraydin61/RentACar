@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using Entity
+@model List<Package>
+
+<style>
+    .kutu{
+   margin:175px;
+    
+
+    }
+   
+</style>
+
+<div class="kutu ">
+    <div class=" text-center"><h3 class="bold">Kayıt Sayfası / Register</h3> </div>
+    <div class="container">
+        <form method="post">
+            <div class="form-group w-50">
+
+                <strong>Kullanici Adi</strong>
+                <input name="UserName" class="form-control" required />
+
+            </div>
+            <div class="form-group w-50">
+                <strong>Şifre</strong>
+                <input name="Password" class="form-control" required />
+            </div>
+            <div class="form-group w-50">
+                <strong>Adiniz</strong>
+                <input name="Name" class="form-control" required />
+            </div>
+
+            <div class="form-group w-50">
+                <strong>Soyadiniz</strong>
+                <input name="Surname" class="form-control" />
+            </div>
+
+            <div class="form-group w-50">
+                <strong>Adress</strong>
+                <input name="Adress" type="text" row="5" class="form-control" required/>
+            </div>
+
+            <div class="form-group w-50">
+
+                <strong>TC No</strong>
+                <input name="TCNo" class="form-control"  />
+            </div>
+            <div class="form-group w-50">
+
+                <strong>Tel No</strong>
+                <input name="TelNo" class="form-control" placeholder="Lütfen Geçerli Bir Telefon Numarası Giriniz..."  required/>
+            </div>
+            <div class="form-group w-50">
+
+                <strong>E-mail</strong>
+                <input name="Email" class="form-control" placeholder="Lütfen Geçerli Bir Email Addresi Giriniz ..."  required/>
+            </div>
+
+            <div class="form-group">
+                <strong>
+                    Bir Paket Seçiniz ...<br />
+                </strong>
+                <select name="PackageId">
+                    @foreach (Package item in ViewBag.Paketler as List<Package>)
+                    {
+                    <option value="@item.Id">@item.PackageName</option>
+                    }
+                    
+
+                </select>
+
+
+            </div>
+            <div class="text-left">
+                <button type="submit" class="btn btn-success btn-lg w-25"> Kaydol</button>
+            </div>
+
+        </form>
+    </div>
+</div>

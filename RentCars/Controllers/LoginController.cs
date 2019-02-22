@@ -42,5 +42,25 @@ namespace RentCars.Controllers
            
             return View();
         }
+        RentContext db = new RentContext();
+        [HttpGet]
+        public ActionResult Register()
+        {
+            ViewBag.Paketler = db.Package.ToList();
+
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Register(Customer customer)
+        {
+            ViewBag.Paketler = db.Package.ToList();
+            if (ModelState.IsValid)
+            {
+
+            }
+
+            return View();
+        }
     }
 }
