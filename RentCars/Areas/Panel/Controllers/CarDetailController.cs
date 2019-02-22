@@ -16,6 +16,29 @@ namespace RentCars.Areas.Panel.Controllers
 
 
        RentContext db = new RentContext();
+        public ActionResult Index(int id)
+        {
+
+
+
+           
+                return View(db.CarDetail.ToList());
+            
+           
+          
+           
+         
+        }
+        public ActionResult Sil(int? id)
+        {
+            if (id.HasValue)
+            {
+
+            }
+           
+
+            return RedirectToAction("Index");
+        }
 
         // GET: Marka
         public ActionResult Index(int? sil)

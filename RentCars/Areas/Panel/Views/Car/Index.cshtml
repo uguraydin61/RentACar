@@ -25,7 +25,8 @@
         <th>Fiyat</th>
         <th>Sayısı</th>
         <th>Resim</th>
-        <th>Araba Detayı Ekle</th>
+        <th>Araba Detayı </th>
+      
         <th>İşlemler</th>
 
     </tr>
@@ -38,9 +39,17 @@
         <td>@item.Price</td>
         <td>@item.numbersCar</td>
         <td><img src="/Uploads/@Html.Raw(item.Id+".jpg") " class="img-responsive a" /></td>
-        <td><a href="/Panel/CarDetail/Duzenle/@item.Id">Araba Detayı Ekle</a></td>
+        @if (item.CarDetail == null)
+        {
+            <td><a href="/Panel/CarDetail/Duzenle/@item.Id">Araba Detayı Ekle</a></td>
+        }
+        else
+        {
+            <td><a href="/Panel/CarDetail/Index/@item.Id">Araba Detaylarını Göster</a></td>
+        }
+
         <td>
-            <a href="?sil=@item.Id">Sil</a>
+            <a href="/Panel/CarDetail/Sil/@item.Id">Sil</a>
             <a href="/Panel/Car/Duzenle/@item.Id">Düzenle</a>
         </td>
     </tr>

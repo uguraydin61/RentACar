@@ -1,17 +1,15 @@
-﻿
-@{
-    Layout = null;
-}
+﻿@using Entity
+@model CarDetail
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Duzenle</title>
-</head>
-<body>
-    <div> 
-    </div>
-</body>
-</html>
+<h2>Araba Detayı Ekle</h2>
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input value="@Model.CarClass" name="CarClass" class="form-control" placeholder="Araba Klasmanı Ekle" /><br />
+    <input value="@Model.CarFuel" name="CarFuel" class="form-control" placeholder="Araba Yakıt Tipi Ekle" /><br />
+    <input value="@Model.Doors" name="Doors" class="form-control" type="number" placeholder="Araba Kapı Sayısı" /><br />
+    <input value="@Model.Seats" name="Seats" class="form-control" type="number" placeholder="Araba Koltuk Sayısı" /><br />
+    <input  value="@Model.Properties"name="Properties" class="form-control" placeholder="Araba Özellikleri" /><br />
+    <input value="@Model.CarDate" name="CarDate" class="form-control" type="datetime" placeholder="Araba Model Yılı" /><br />
+    <input value="@Model.CarAbout" name="CarAbout" class="form-control" type="text" placeholder="Araba Hakkında" /><br />
+    <button>Kaydet</button>
+</form>

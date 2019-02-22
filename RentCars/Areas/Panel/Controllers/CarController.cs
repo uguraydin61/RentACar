@@ -25,6 +25,7 @@ namespace RentCars.Areas.Panel.Controllers
             }
             return View(_uw.CarRep.HepsiniGetir());
         }
+      
         [HttpGet]
         public ActionResult Yeni()
         {

@@ -40,7 +40,7 @@ namespace BLL
         public override void Guncelle(IEntity yeni)
         {
 
-            var eski = _db.Car.Find(yeni.Id);
+            var eski = _db.CarDetail.Find(yeni.Id);
 
 
 
