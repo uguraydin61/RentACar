@@ -25,8 +25,9 @@
         <th>Fiyat</th>
         <th>Sayısı</th>
         <th>Resim</th>
+        <th>Araba Detayı Ekle</th>
         <th>İşlemler</th>
-       
+
     </tr>
     @foreach (var item in Model)
     {
@@ -37,6 +38,7 @@
         <td>@item.Price</td>
         <td>@item.numbersCar</td>
         <td><img src="/Uploads/@Html.Raw(item.Id+".jpg") " class="img-responsive a" /></td>
+        <td><a href="/Panel/CarDetail/Duzenle/@item.Id">Araba Detayı Ekle</a></td>
         <td>
             <a href="?sil=@item.Id">Sil</a>
             <a href="/Panel/Car/Duzenle/@item.Id">Düzenle</a>

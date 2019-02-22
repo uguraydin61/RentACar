@@ -1,0 +1,19 @@
+﻿@using Entity
+@model Package
+
+
+
+<h2>Marka Düzenle</h2>
+
+<form method="post">
+
+    <input type="hidden" name="Id" value="@Model.Id" />
+
+
+    <input name="PackageName" class="form-control" value="@Model.PackageName" />
+    <input name="Price" class="form-control" value="@Model.Price" />
+
+    <button>Kaydet</button>
+
+</form>
+

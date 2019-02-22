@@ -14,6 +14,7 @@
 
 <table>
     <tr>
+        
         <th>Araba Klasmanı</th>
         <th>Araç Yakıt Tipi</th>
         <th>Araba Kapısı Sayısı</th>
@@ -23,21 +24,23 @@
         <th>Araba Hakkında</th>
         <th>İşlemler</th>
     </tr>
+   
     @foreach (var item in Model)
     {
-    <tr>
-        <td>@item.CarClass</td>
-        <td>@item.CarFuel</td>
-        <td>@item.Doors</td>
-        <td>@item.Seats</td>
-        <td>@item.Properties</td>
-        <td>@item.CarDate</td>
-        <td>@item.CarAbout</td>
-        <td>
-            <a href="?sil=@item.Id">Sil</a>
-            <a href="/Panel/CarBrand/Duzenle/@item.Id">Düzenle</a>
-        </td>
-    </tr>
+        <tr>
+
+            <td>@item.CarClass</td>
+            <td>@item.CarFuel</td>
+            <td>@item.Doors</td>
+            <td>@item.Seats</td>
+            <td>@item.Properties</td>
+            <td>@item.CarDate</td>
+            <td>@item.CarAbout</td>
+            <td>
+                <a href="?sil=@item.Id">Sil</a>
+                <a href="/Panel/CarBrand/Duzenle/@item.Id">Düzenle</a>
+            </td>
+        </tr>
     }
 </table>
 

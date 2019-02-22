@@ -1,0 +1,37 @@
+﻿@using Entity
+@model List<Package>
+
+
+<h2>Markalar</h2>
+<a href="/Panel/Package/Yeni">Paket Ekle</a>
+
+<style>
+    th, td {
+        padding: 20px;
+        border: 1px solid black;
+    }
+</style>
+
+<table>
+    <tr>
+        <th>Paket Adı</th>
+        <th>Fiyat</th>
+        <th>İşlemler</th>
+       
+    </tr>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>@item.PackageName</td>
+        <td>@item.Price</td>
+        <td>
+            <a href="?sil=@item.Id">Sil</a>
+            <a href="/Panel/Package/Duzenle/@item.Id">Düzenle</a>
+            <a href="/Panel/PackageDetail/Index?=@item.Id">Paket Detayı</a>
+        </td>
+    </tr>
+    }
+
+
+</table>
+
