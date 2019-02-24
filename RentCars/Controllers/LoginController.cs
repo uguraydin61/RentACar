@@ -37,7 +37,7 @@ namespace RentCars.Controllers
                 {
                     Session["Kullanici"] =x.UserName;
                     Session["Exit"] = x.Id;
-                    Session["Giris"] = true;
+                    Session["Giris"] = x.Id;
                     return RedirectToAction("Index", "Home");
 
 

@@ -12,6 +12,7 @@ namespace RentCars.Controllers
     {
         UnitOfWork _uw = new UnitOfWork();
         // GET: Cars
+        [HttpGet]
         public ActionResult Index()
         {
             ViewBag.FilterElemans = TempData["Filter"];
@@ -31,6 +32,24 @@ namespace RentCars.Controllers
 
            
 
+        }
+        [HttpPost]
+
+        public ActionResult CarDetail(Rezervation rez)
+        {
+            if (ModelState.IsValid)
+            {
+                if (rez != null)
+                {
+                    _uw.RezervationRep.Ekle(rez);
+                    return RedirectToAction("Index","Cars");
+                }
+             
+               
+
+            }
+            return View();
+            
         }
     }
 }

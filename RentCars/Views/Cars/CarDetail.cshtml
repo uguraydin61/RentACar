@@ -9,6 +9,11 @@
         .kutu{
             margin:150px;
         }
+        .kutu2{
+            box-sizing:border-box;
+            border:2px solid silver;
+            padding:15px;
+        }
     </style>
 <div class="kutu">
     <section id="car-list-area" class="section-padding">
@@ -83,32 +88,46 @@
                                         <i class="fa fa-star unmark"></i>
                                     </p>
                                 </div>
-                                <div class="review-form">
-                                    <form method="post">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6">
-                                                <div class="name-input">
-                                                    <input type="text" placeholder="Full Name">
+
+                                @{
+                                    if (Session["Giris"] != null)
+                                    {
+                                <div class="kutu2">
+                                    <div style="text-align:center"><h3><strong>BEĞENDİYSENiZ AŞAĞIDAKİ FORMU DOLDURUN</strong></h3></div>
+                                    <br />
+                                    <div class="review-form">
+                                        <form method="post">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6">
+                                                    <div class="name-input">
+                                                        <input type="text" id="startDate" name="PickUpDate" placeholder="Alis Tarihi" required>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-6">
+                                                    <div class="email-input">
+                                                        <input type="text" name="ReturnDate" id="endDate" placeholder="Veriliş Tarihi" required>
+                                                    </div>
                                                 </div>
                                             </div>
-
-                                            <div class="col-lg-6 col-md-6">
-                                                <div class="email-input">
-                                                    <input type="email" placeholder="Email Address">
-                                                </div>
+                                            <div class="col-lg">
+                                                <textarea rows="5" name="Istek" placeholder="Araba İsteğinizi Belirtin ..."></textarea>
                                             </div>
-                                        </div>
 
-                                        <div class="message-input">
-                                            <textarea name="review" cols="30" rows="5" placeholder="Write Your Feedback Here!"></textarea>
-                                        </div>
+                                            <input type="hidden" name="CustomerId" value='@Session["Giris"]' />
+                                            <input type="hidden" name="CarId" value="@Model.Id" />
 
-                                        <div class="input-submit">
-                                            <button type="submit">Submit</button>
-                                            <button type="reset">Clear</button>
-                                        </div>
-                                    </form>
+
+                                            <div class="input-submit">
+                                                <button type="submit">Gönder</button>
+                                                <button type="reset">Temizle</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
+                                    }
+                                }
+
                             </div>
                         </div>
                     </div>

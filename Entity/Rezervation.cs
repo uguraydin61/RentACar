@@ -15,6 +15,7 @@ namespace Entity
 
         public DateTime PickUpDate { get; set; }
         public DateTime ReturnDate { get; set; }
+        public string Istek { get; set; }
 
         [ForeignKey("Customer")]
         public int CustomerId { get; set; }
