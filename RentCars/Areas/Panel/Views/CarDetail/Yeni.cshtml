@@ -1,8 +1,10 @@
 ﻿@using Entity
-@model CarDetail
+@model Car
 
 <h2>Araba Detayı Ekle</h2>
 <form method="post">
+  
+   <input type="hidden" name="Id"  value="@Model.Id"/>
     <input name="CarClass" class="form-control" placeholder="Araba Klasmanı Ekle" /><br />
     <input name="CarFuel" class="form-control" placeholder="Araba Yakıt Tipi Ekle" /><br />
     <input name="Doors" class="form-control" type="number" placeholder="Araba Kapı Sayısı" /><br />

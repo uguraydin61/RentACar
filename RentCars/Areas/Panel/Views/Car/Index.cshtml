@@ -41,11 +41,11 @@
         <td><img src="/Uploads/@Html.Raw(item.Id+".jpg") " class="img-responsive a" /></td>
         @if (item.CarDetail == null)
         {
-            <td><a href="/Panel/CarDetail/Duzenle/@item.Id">Araba Detayı Ekle</a></td>
+            <td><a href="/Panel/CarDetail/Yeni/@item.Id">Araba Detayı Ekle</a></td>
         }
         else
         {
-            <td><a href="/Panel/CarDetail/Index/@item.Id">Araba Detaylarını Göster</a></td>
+            <td><a href="/Panel/CarDetail/Duzenle/@item.Id">Araba Detaylarını Göster</a></td>
         }
 
         <td>

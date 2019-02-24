@@ -41,7 +41,7 @@ namespace RentCars.Controllers
             if (FilterElemans.Count() > 0)
             {
                TempData["Filter"] = FilterElemans.ToList();
-                return RedirectToAction("Cars","Cars");
+                return RedirectToAction("Index","Cars");
 
             }
           

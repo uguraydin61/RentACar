@@ -9,7 +9,7 @@ namespace RentCars.Controllers
     public class ServiceController : Controller
     {
         // GET: Service
-        public ActionResult Service()
+        public ActionResult Index()
         {
             return View();
         }

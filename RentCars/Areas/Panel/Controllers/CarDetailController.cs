@@ -48,11 +48,9 @@ namespace RentCars.Areas.Panel.Controllers
         [HttpGet]
         public ActionResult Yeni(int? id)
         {
+         var araba=  db.Car.Find(id.Value);
 
-
-           
-
-            return View();
+            return View(araba);
         }
 
         [HttpPost]
@@ -61,7 +59,7 @@ namespace RentCars.Areas.Panel.Controllers
             if (ModelState.IsValid)
             {
                 _uw.CarDetailRep.ArabaylaEkle(yenidetay,id.Value);
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Car");
             }
             ViewBag.Arabalar = _uw.CarRep.HepsiniGetir();
             return View(yenidetay);
@@ -89,7 +87,7 @@ namespace RentCars.Areas.Panel.Controllers
             if (ModelState.IsValid)
             {
                 _uw.CarDetailRep.Guncelle(yeni);
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Car");
             }
 
             return View(yeni);

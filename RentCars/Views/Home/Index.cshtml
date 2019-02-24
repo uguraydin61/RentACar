@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
+@ViewBag.Message
 
 <!--== Header Area End ==-->
 <!--== Slider Area Start ==-->
@@ -26,7 +26,7 @@
                                     <option selected>Select</option>
                                     @foreach (var item in Model.Vendors)
                                     {
-                                        <option value="@item.Id" >@item.Adress</option>
+                                        <option value="@item.Id">@item.Adress</option>
                                     }
 
 
@@ -38,17 +38,17 @@
                                 <h4>Max Price</h4>
                                 <input type="number" min="100" step="20" name="MaxPrice" placeholder="Pick Up Date" />
 
-                               
+
                             </div>
                             <!--== Pick Up Location ==-->
                             <!--== Car Choose ==-->
                             <div class="choose-car-type book-item">
                                 <h4>CHOOSE CAR TYPE:</h4>
                                 <select class="custom-select" name="brandId">
-                                    <option selected >Select</option>
+                                    <option selected>Select</option>
                                     @foreach (var item in Model.CarBrands)
                                     {
-                                        <option value="@item.Id" >@item.BrandName</option>
+                                        <option value="@item.Id">@item.BrandName</option>
 
                                     }
                                 </select>

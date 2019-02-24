@@ -3,9 +3,12 @@
     Layout = null;
 }
 <style>
-   
+   .kaydir{
+       position:relative;
+       left:25px;
+   }
 </style>
-@using Entity
+
 
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
@@ -74,14 +77,17 @@
                     <!--== Single HeaderTop Start ==-->
                     @{
 
-                        if (Session["Kullanici"]!=null)
+                        if (Session["Kullanici"] != null&&Session["Exit"]!=null)
                         {
                             <p>@Session["Kullanici"]</p>
+                            <span class="kaydir"> <a href='/Login/Exit/@Session["Exit"]' class="btn btn-warning">Çıkış Yap</a></span>
                         }
                         else
                         {
                             <div class="col-lg-3 text-center">
                                 <a href="/Login/Index/" class="btn btn-secondary btn-sm">Giriş Yap</a>
+
+
                             </div>
 
                         }
@@ -121,29 +127,29 @@
                         <nav class="mainmenu alignright">
                             <ul>
                                 <li>
-                                    <a href="/Home/Index">Home</a>
+                                    <a href="/Home/Index">Ana Sayfa</a>
                                 </li>
-                                <li><a href="/About/About" ">About</a></li>
-                                <li><a href="/Service/Service" ">services</a></li>
+                                <li><a href="/About/Index">Hakkımızda</a></li>
+                                <li><a href="/Service/Index">Hakkımızda</a></li>
                                 <li>
-                                    <a href="/Cars/Cars">Cars</a>
+                                    <a href="/Cars/Index">Araçlarımız</a>
 
                                 </li>
                                 <li>
                                     <a href="#">Pages</a>
                                     <ul>
-                                        <li><a href="/Pages/Pricing">Pricing</a></li>
-                                        <li><a href="/Pages/Driver">Driver</a></li>
+                                        <li><a href="/Pages/Pricing">Ücretlendirme</a></li>
+                                        <li><a href="/Pages/Driver">Sürücülerimiz</a></li>
                                         <li><a href="/Pages/FAQ">FAQ</a></li>
-                                        <li><a href="/Pages/Gallery">Gallery</a></li>
-                                        <li><a href="/Pages/HelpDesk">Help Desk</a></li>
+                                        <li><a href="/Pages/Gallery">Galerimiz</a></li>
+                                        <li><a href="/Pages/HelpDesk">Yardım Masamız</a></li>
 
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="/Blog/Blog">Blog</a>
+                                    <a href="/Blog/Index">Blog</a>
                                 </li>
-                                <li><a href="/Contact/Contact">Contact</a></li>
+                                <li><a href="/Contact/Index">İletişim</a></li>
                             </ul>
                         </nav>
                     </div>

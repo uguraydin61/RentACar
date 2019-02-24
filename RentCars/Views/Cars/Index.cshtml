@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @using Entity
-@model  Car
+@model List<Car>
 
 
 <!--== Page Title Area Start ==-->
@@ -39,15 +39,15 @@
                                 {
                                     <div class="col-lg-6 col-md-6">
                                         <div class="single-car-wrap">
-                                            <div class="car-list-thumb car-thumb-1"></div>
+                                            <div class="car-list-thumb car-thumb-1"><img src='/Uploads/@Html.Raw(item.Id+".jpg")' class="img-responsive" /></div>
                                             <div class="car-list-info without-bar">
-                                                <h2><a href="#">@item.CarModel Martin One-77</a></h2>
-                                                <h5> @item.Price Rent /per a day</h5>
-                                                <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean inorci luctus et ultrices posuere cubilia.</p>
+                                                <h2>@item.CarModel</h2>
+                                                <h5> @item.Price.ToString("C") Rent /per a day</h5>
+                                                <p>@item.CarDetail.CarAbout</p>
                                                 <ul class="car-info-list">
-                                                    <li>AC</li>
-                                                    <li>Diesel</li>
-                                                    <li>Auto</li>
+                                                    <li>@item.CarDetail.CarDate.Value.ToString("dd-MM-yyyy")</li>
+                                                    <li>@item.CarDetail.CarClass</li>
+                                                    <li>@item.CarDetail.CarFuel</li>
                                                 </ul>
                                                 <p class="rating">
                                                     <i class="fa fa-star"></i>
@@ -56,12 +56,41 @@
                                                     <i class="fa fa-star"></i>
                                                     <i class="fa fa-star unmark"></i>
                                                 </p>
-                                                <a href="#" class="rent-btn">Book It</a>
+                                                <a href="/" class="rent-btn">Book It</a>
                                             </div>
                                         </div>
                                     </div>
                                 }
 
+                            }
+                            else
+                            {
+                                foreach (Car item in Model)
+                                {
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="single-car-wrap">
+                                            <div class="car-list-thumb car-thumb-1"><img src='/Uploads/@Html.Raw(item.Id+".jpg")' class="img-responsive" /></div>
+                                            <div class="car-list-info without-bar">
+                                                <h2>@item.CarModel</h2>
+                                                <h5> @item.Price.ToString("C") Rent /per a day</h5>
+                                                <p>@item.CarDetail.CarAbout</p>
+                                                <ul class="car-info-list">
+                                                    <li>@item.CarDetail.CarDate.Value.ToString("dd-MM-yyyy")</li>
+                                                    <li>@item.CarDetail.CarClass</li>
+                                                    <li>@item.CarDetail.CarFuel</li>
+                                                </ul>
+                                                <p class="rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star unmark"></i>
+                                                </p>
+                                                <a href="/Cars/CarDetail/@item.Id" class="rent-btn">Kirala</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
                             }
                         }
 

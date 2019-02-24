@@ -9,7 +9,7 @@ namespace RentCars.Controllers
     public class ContactController : Controller
     {
         // GET: Contact
-        public ActionResult Contact()
+        public ActionResult Index()
         {
             return View();
         }

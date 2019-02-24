@@ -11,6 +11,8 @@ namespace RentCars.Controllers
 {
     public class LoginController : Controller
     {
+        UnitOfWork _uw = new UnitOfWork();
+
         // GET: Login
         RentContext _db = new RentContext();
         public ActionResult Index()
@@ -25,18 +27,23 @@ namespace RentCars.Controllers
             {
 
                 var x = (from a in LoginCustomers
-                        select new
-                        {
+                         select new
+                         {
+                             a.Id,
                             a.UserName
                         }).FirstOrDefault();
 
                 if (x != null)
                 {
                     Session["Kullanici"] =x.UserName;
+                    Session["Exit"] = x.Id;
+                    Session["Giris"] = true;
+                    return RedirectToAction("Index", "Home");
+
 
                 }
                  
-                return RedirectToAction("Index", "Home");
+               
 
             }
            
@@ -57,10 +64,25 @@ namespace RentCars.Controllers
             ViewBag.Paketler = db.Package.ToList();
             if (ModelState.IsValid)
             {
+                if (customer != null)
+                {
+                    _uw.CustomerRep.Ekle(customer);
+                    ViewBag.Message = "<script>alert('Başarıyla Eklendiniz ...')</script>";
+                    return RedirectToAction("Index", "Home");
+                }
+                
 
             }
 
             return View();
+        }
+        [HttpGet]
+        public ActionResult Exit(int id)
+        {
+            Session.Abandon();
+            return RedirectToAction("Index", "Home");
+
+
         }
     }
 }
