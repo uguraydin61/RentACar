@@ -18,27 +18,35 @@ namespace RentCars.Areas.Panel.Controllers
        RentContext db = new RentContext();
         public ActionResult Index()
         {
-           
-                return View(_uw.CarDetailRep.HepsiniGetir());
+            if (Session["Giris"] == null )
+            {
+
+                return RedirectToAction("Index", "Login");
+
+            }
+            return View(_uw.CarDetailRep.HepsiniGetir());
         }
-        //[HttpPost]
-        //public ActionResult Index(int? sil)
-        //{
+        [HttpPost]
+        public ActionResult Index(int? sil)
+        {
 
-        //    if (sil.HasValue)
-        //    {
+            if (sil.HasValue)
+            {
 
-        //        _uw.CarDetailRep.Sil(sil.Value);
+                _uw.CarDetailRep.Sil(sil.Value);
 
-        //    }
-        //    return View(_uw.CarDetailRep.HepsiniGetir());
-        //}
+            }
+            return View(_uw.CarDetailRep.HepsiniGetir());
+        }
         public ActionResult Sil(int? id)
         {
+          
             if (id.HasValue)
             {
                 _uw.CarDetailRep.Sil(id.Value);
             }
+           
+           
 
             return RedirectToAction("Index");
         }

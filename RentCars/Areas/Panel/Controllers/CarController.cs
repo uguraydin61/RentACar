@@ -15,7 +15,17 @@ namespace RentCars.Areas.Panel.Controllers
 
 
         // GET: Marka
-        public ActionResult Index(int? sil)
+        public ActionResult Index()
+        {
+            if (Session["Giris"] == null)
+            {
+
+                return RedirectToAction("Index", "Login");
+
+            }
+            return View(_uw.CarRep.HepsiniGetir());
+        }
+        public ActionResult Sil(int? sil)
         {
 
             if (sil.HasValue)
@@ -25,7 +35,7 @@ namespace RentCars.Areas.Panel.Controllers
             }
             return View(_uw.CarRep.HepsiniGetir());
         }
-      
+
         [HttpGet]
         public ActionResult Yeni()
         {

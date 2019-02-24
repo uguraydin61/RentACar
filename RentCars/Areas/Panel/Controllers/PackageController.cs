@@ -18,6 +18,12 @@ namespace RentCars.Areas.Panel.Controllers
         // GET: Marka
         public ActionResult Index(int? sil)
         {
+            if (Session["Giris"] == null)
+            {
+
+                return RedirectToAction("Index", "Login");
+
+            }
 
             if (sil.HasValue)
             {

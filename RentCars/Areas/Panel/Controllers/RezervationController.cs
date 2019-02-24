@@ -11,6 +11,12 @@ namespace RentCars.Areas.Panel.Controllers
         // GET: Panel/Rezervation
         public ActionResult Index()
         {
+            if (Session["Giris"] == null)
+            {
+
+                return RedirectToAction("Index", "Login");
+
+            }
             return View();
         }
     }

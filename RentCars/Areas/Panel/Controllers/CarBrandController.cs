@@ -13,11 +13,18 @@ namespace RentCars.Areas.Panel.Controllers
         UnitOfWork _uw = new UnitOfWork();
 
 
+        
 
         // GET: Marka
         public ActionResult Index(int? sil)
         {
 
+            if (Session["Giris"] == null)
+            {
+
+                return RedirectToAction("Index","Login");
+
+            }
             if (sil.HasValue)
             {
                 _uw.CarBrandRep.Sil(sil.Value);
