@@ -6,14 +6,10 @@ using System.Web.Mvc;
 
 namespace RentCars.Controllers
 {
-    public class BlogController : Controller
+    public class BlogsController : Controller
     {
-        // GET: Controller
+        // GET: Blogs
         public ActionResult Index()
-        {
-            return View();
-        }
-        public ActionResult BlogDetails()
         {
             return View();
         }
