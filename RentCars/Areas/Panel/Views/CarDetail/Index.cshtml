@@ -24,7 +24,7 @@
         <th>Araba Hakkında</th>
         <th>İşlemler</th>
     </tr>
-    <input type="hidden" name="Id" value="@Model.Id" />
+
     @foreach (var item in Model)
     {
         <tr>
@@ -37,7 +37,7 @@
             <td>@item.CarDate</td>
             <td>@item.CarAbout</td>
             <td>
-                <a href="?sil=@item.Id">Sil</a>
+                <a href="/Panel/CarDetail/Sil/@item.Id">Sil</a>
                 <a href="/Panel/CarBrand/Duzenle/@item.Id">Düzenle</a>
             </td>
         </tr>

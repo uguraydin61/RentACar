@@ -16,42 +16,35 @@ namespace RentCars.Areas.Panel.Controllers
 
 
        RentContext db = new RentContext();
-        public ActionResult Index(int id)
+        public ActionResult Index()
         {
-
-
-
            
-                return View(db.CarDetail.ToList());
-            
-           
-          
-           
-         
+                return View(_uw.CarDetailRep.HepsiniGetir());
         }
+        //[HttpPost]
+        //public ActionResult Index(int? sil)
+        //{
+
+        //    if (sil.HasValue)
+        //    {
+
+        //        _uw.CarDetailRep.Sil(sil.Value);
+
+        //    }
+        //    return View(_uw.CarDetailRep.HepsiniGetir());
+        //}
         public ActionResult Sil(int? id)
         {
             if (id.HasValue)
             {
-
+                _uw.CarDetailRep.Sil(id.Value);
             }
-           
 
             return RedirectToAction("Index");
         }
 
-        // GET: Marka
-        public ActionResult Index(int? sil)
-        {
-
-            if (sil.HasValue)
-            {
-               
-                _uw.CarDetailRep.Sil(sil.Value);
-
-            }
-            return View(_uw.CarDetailRep.HepsiniGetir());
-        }
+      
+     
         [HttpGet]
         public ActionResult Yeni(int? id)
         {
