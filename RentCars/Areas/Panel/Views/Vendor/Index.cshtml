@@ -15,12 +15,14 @@
 <table>
     <tr>
         <th>Bayi Adı</th>
+        <th>Bayi Adress</th>
         <th>İşlemler</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td>@item.Name</td>
+            <td>@item.Adress</td>
             <td>
                 <a href="?sil=@item.Id">Sil</a>
                 <a href="/Panel/Vendor/Duzenle/@item.Id">Düzenle</a>
