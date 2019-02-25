@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace RentCars.Controllers
 {
-    public class LoginController : Controller
+    public class GirisController : Controller
     {
         UnitOfWork _uw = new UnitOfWork();
 

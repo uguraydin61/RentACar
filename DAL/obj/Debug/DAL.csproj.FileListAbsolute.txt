@@ -82,3 +82,17 @@ C:\Users\MSI\Source\Repos\RentACar\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.ca
 C:\Users\MSI\Source\Repos\RentACar\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\MSI\Source\Repos\RentACar\DAL\obj\Debug\DAL.dll
 C:\Users\MSI\Source\Repos\RentACar\DAL\obj\Debug\DAL.pdb
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\bin\Debug\DAL.dll.config
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\bin\Debug\DAL.dll
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\bin\Debug\DAL.pdb
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\bin\Debug\Entity.dll
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\bin\Debug\Entity.pdb
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\obj\Debug\DAL.dll
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\DAL\obj\Debug\DAL.pdb

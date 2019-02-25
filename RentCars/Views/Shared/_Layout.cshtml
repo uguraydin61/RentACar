@@ -80,12 +80,12 @@
                         if (Session["Kullanici"] != null&&Session["Exit"]!=null)
                         {
                             <p>@Session["Kullanici"]</p>
-                            <span class="kaydir"> <a href='/Login/Exit/@Session["Exit"]' class="btn btn-warning">Çıkış Yap</a></span>
+                            <span class="kaydir"> <a href='/Giris/Exit/@Session["Exit"]' class="btn btn-warning">Çıkış Yap</a></span>
                         }
                         else
                         {
                             <div class="col-lg-3 text-center">
-                                <a href="/Login/Index/" class="btn btn-secondary btn-sm">Giriş Yap</a>
+                                <a href="/Giris/Index/" class="btn btn-secondary btn-sm">Giriş Yap</a>
 
 
                             </div>

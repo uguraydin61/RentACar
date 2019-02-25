@@ -34,3 +34,9 @@ C:\Users\MSI\Source\Repos\RentACar\Entity\obj\Debug\Entity.csprojAssemblyReferen
 C:\Users\MSI\Source\Repos\RentACar\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
 C:\Users\MSI\Source\Repos\RentACar\Entity\obj\Debug\Entity.dll
 C:\Users\MSI\Source\Repos\RentACar\Entity\obj\Debug\Entity.pdb
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\Entity\bin\Debug\Entity.dll
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\Entity\bin\Debug\Entity.pdb
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\Entity\obj\Debug\Entity.dll
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\Entity\obj\Debug\Entity.pdb

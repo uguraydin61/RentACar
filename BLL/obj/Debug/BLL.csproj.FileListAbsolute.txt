@@ -100,3 +100,20 @@ C:\Users\MSI\Source\Repos\RentACar\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.ca
 C:\Users\MSI\Source\Repos\RentACar\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\MSI\Source\Repos\RentACar\BLL\obj\Debug\BLL.dll
 C:\Users\MSI\Source\Repos\RentACar\BLL\obj\Debug\BLL.pdb
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\bin\Debug\BLL.dll.config
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\bin\Debug\BLL.dll
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\bin\Debug\BLL.pdb
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\bin\Debug\DAL.dll
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\bin\Debug\Entity.dll
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\bin\Debug\DAL.pdb
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\bin\Debug\DAL.dll.config
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\bin\Debug\Entity.pdb
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\bin\Debug\EntityFramework.xml
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\obj\Debug\BLL.dll
+C:\Users\Section1\Desktop\Yeni klasör (2)\RentACar\BLL\obj\Debug\BLL.pdb
